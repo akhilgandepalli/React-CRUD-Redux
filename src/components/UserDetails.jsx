@@ -22,7 +22,7 @@ const UserDetails = () => {
   return (
     <main>
       <h2>Crud operations using Redux</h2>
-      <div className='btns'><button onClick={()=>dispatch(fetchUsers())}>Get Users</button>
+      <div className='btns'><button disabled={users.users.length >0 ?true:false} onClick={()=>dispatch(fetchUsers())}>Get Users</button>
       <button onClick={showUsers}>{!action ? 'Show Users' :' Hide Users'}</button>
       <button onClick={()=>setForm(true)}>Add User</button>
       </div>
